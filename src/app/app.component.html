@@ -1,0 +1,11 @@
+<div [formGroup]="acceptanceDateForm">
+  <div formArrayName="dates">
+    <ul>
+        <div *ngFor="let control of dates.controls; let i = index">
+          <li>{{ staticArray[i] }}</li>
+          <input type="date" [formControlName]="i" id="">
+        </div>
+    </ul>
+    <button type="submit" (click)="handleClick()">Update</button>
+  </div>
+</div>
